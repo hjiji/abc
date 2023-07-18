@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>우크라이나 러시아 전쟁</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 15px;
+      margin: 20px;
+      margin-bottom: 0px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .banner {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      font-size: x-large;
+      justify-content: space-between;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .banner-image {
+      position: relative;
+    }
+
+    .banner-image img {
+      height: 40px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .categories {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      width: calc(100% - 40px);
+      background-color: #333;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      margin-bottom: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .category {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      font-weight: bold;
+      color: #fff;
+      position: relative;
+      transition: background-color 0.3s;
+    }
+
+    .category-title {
+      background-color: #333;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+      padding: 7px;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 20px;
+      margin-bottom: 3px;
+    }
+
+    .underline {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      margin-bottom: 2px;
+      background-color: #fff;
+      visibility: hidden;
+      transition: visibility 0s, width 0.3s;
+    }
+
+    .category:hover .underline,
+    .category.active .underline {
+      visibility: visible;
+      width: 100%;
+    }
+
+    .article {
+      display: flex;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+
+    .article.active {
+      display: flex;
+    }
+
+    .article .image {
+      width: 100px;
+      height: 100px;
+      margin-right: 10px;
+      overflow: hidden;
+    }
+
+    .article .image img {
+      width: 150%;
+      height: 120%;
+      object-fit: cover;
+    }
+
+    .article .content {
+      flex: 1;
+    }
+
+    .article .divider {
+      width: 1px;
+      background-color: #ccc;
+      margin-left: 0;
+      margin-right: 10px;
+    }
+
+    .underline {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      visibility: hidden;
+    }
+
+    .category.active .underline {
+      visibility: visible;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="banner">
+        <div class="header-content">
+          <h1>&nbsp;&nbsp;우크라이나 러시아 전쟁</h1>
+        </div>
+        <div class="logo">
+          <img src="mainimage.png" alt="Logo">
+        </div>
+      </header>
+      
+  <main>
+    <div class="categories">
+      <div class="category" id="home">
+        <div class="category-title">홈</div>
+        <div class="underline"></div>
+      </div>
+      <div class="category" id="background">
+        <div class="category-title">전쟁 배경</div>
+        <div class="underline"></div>
+      </div>
+      <div class="category" id="course">
+        <div class="category-title">전개 과정</div>
+        <div class="underline"></div>
+      </div>
+      <div class="category" id="view">
+        <div class="category-title">현황 및 전망</div>
+        <div class="underline"></div>
+      </div>
+      <div class="category" id="action">
+        <div class="category-title">기타</div>
+        <div class="underline"></div>
+      </div>
+    </div>
+
+    <div id="home-page">
+      <div class="article active">
+        <div class="image">
+          <img src="1.jpg" alt="1">
+        </div>
+        <div class="divider"></div>
+        <div class="content" onclick="location.href='1.html'" style="cursor: pointer;">
+          <h2>우크라이나 러시아 전쟁에 대하여</h2>
+          <p>우크라이나 러시아 전쟁의 역사적 배경부터 전개 과정, 현황까지 카드뉴스를 통한 우크라이나 러시아 전쟁에 관한 정리</p>
+        </div>
+      </div>
+      <div class="article active">
+        <div class="image">
+          <img src="2.jpg" alt="2">
+        </div>
+        <div class="divider"></div>
+        <div class="content" onclick="location.href = 'https://www.unhcr.or.kr/ukraine-emergency-CDZ/?utm_source=google&utm_medium=cpc&utm_campaign=KR_PS_KO_UA&utm_content=UKR1YM';" style="cursor: pointer;">
+          <h2>전쟁으로 인해 삶의 터전을 잃은 우크라이나 난민들을 위해 모금에 동참해주세요!</h2>
+          <p>2022년 2월 24일 새벽 5시
+            전쟁으로 소중한 보금자리가 한순간에 파괴되어버린 우크라이나 국민을 돕기 위해 유엔난민기구에서는 모금 운동을 하고 있습니다. 많은 관심 부탁드립니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="background-page">
+      <div class="article">
+        <div class="image">
+          <img src="1.1.jpg" alt="3">
+        </div>
+        <div class="divider"></div>
+        <div class="content" onclick="location.href='3.html'" style="cursor: pointer;">
+          <h2>2014년 돈바스 내전부터 예견된 우크라이나 러시아 전쟁</h2>
+          <p>돈바스 내전으로 알아보는 우크라이나 러시아 전쟁의 배경</p>
+        </div>
+      </div>
+      <div class="article">
+        <div class="image">
+          <img src="1.2.jpg" alt="4">
+        </div>
+        <div class="divider"></div>
+        <div class="content" onclick="location.href='4.html'" style="cursor: pointer;">
+          <h2>"자연으로부터 축복받은 땅, 역사로부터 저주받은 땅", 우크라이나와 러시아의 질긴 악연</h2>
+          <p>우크라이나와 러시아의 역사에 대하여</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="course-page">
+      <div class="article">
+        <div class="image">
+          <img src="5.jpeg" alt="5">
+        </div>
+        <div class="divider"></div>
+        <div class="content" onclick="location.href='5.html';" style="cursor: pointer;">
+          <h2>2022년 2월 24일 새벽 5시, 잊을 수 없는 그날</h2>
+          <p>우크라이나 러시아 전쟁의 발발</p>
+        </div>
+      </div>
+      <div class="article">
+        <div class="image">
+          <img src="6.jpg" alt="6">
+        </div>
+        <div class="divider"></div>
+        <div class="content" onclick="location.href='6.html'" style="cursor: pointer;">
+          <h2>4단계로 나누어 분석하는 우크라이나 러시아 전쟁의 전개 과정</h2>
+          <p>우크라이나 러시아 전쟁의 전개 과정</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="view-page">
+      <div class="article">
+        <div class="image">
+          <img src="7.jpg" alt="7">
+        </div>
+        <div class="divider"></div>
+        <div class="content" onclick="location.href='7.html';" style="cursor: pointer;">
+          <h2>우크라이나 러시아 전쟁의 끔찍한 참상 </h2>
+          <p>우크라이나 러시아 전쟁으로 인한 피해</p>
+        </div>
+      </div>
+      <div class="article">
+        <div class="image">
+          <img src="8.jpg" alt="8">
+        </div>
+        <div class="divider"></div>
+        <div class="content" onclick="location.href='8.html';" style="cursor: pointer;">
+          <h2>우크라이나 러시아 전쟁이 보여준 전쟁의 미래! 사이버 전쟁이 알고 싶다</h2>
+          <p>우크라이나 러시아 전쟁이 보여준 미래의 전쟁 양상, 사이버 전쟁에 대하여</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="action-page">
+      <div class="article">
+        <div class="image">
+          <img src="9.jpeg" alt="9">
+        </div>
+        <div class="divider"></div>
+        <div class="content" onclick="location.href='9.html';" style="cursor: pointer;">
+          <h2>러시아가 우크라이나와의 전쟁에 이용한 금지된 무기, 백린탄과 열압력탄</h2>
+          <p>우크라이나 러시아 전쟁과 무기에 관한 고찰</p>
+        </div>
+      </div>
+      <div class="article">
+        <div class="image">
+          <img src="10.jpg" alt="10">
+        </div>
+        <div class="divider"></div>
+        <div class="content" onclick="location.href='10.html'" style="cursor: pointer;">
+          <h2>우크라이나 러시아 전쟁의 가장 큰 피해자, 국민</h2>
+          <p>전쟁으로 인한 피해는 주로 누가 입게 될까? 전쟁이 일어나서는 안되는 이유는 무엇일까?</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function goToCategory(category) {
+      var categoryPages = document.querySelectorAll("[id$='-page']");
+      for (var i = 0; i < categoryPages.length; i++) {
+        categoryPages[i].style.display = "none";
+      }
+      
+      var categoryPage = document.getElementById(category + "-page");
+      categoryPage.style.display = "block";
+
+      var articles = categoryPage.getElementsByClassName("article");
+      for (var i = 0; i < articles.length; i++) {
+        articles[i].classList.remove("active");
+      }
+
+      if (articles.length > 0) {
+        articles[0].classList.add("active");
+      }
+
+      var categories = document.getElementsByClassName("category");
+      for (var i = 0; i < categories.length; i++) {
+        categories[i].classList.remove("active");
+      }
+      var selectedCategory = document.getElementById(category);
+      selectedCategory.classList.add("active");
+    }
+
+    var categories = document.getElementsByClassName("category");
+    for (var i = 0; i < categories.length; i++) {
+      categories[i].addEventListener("click", function(event) {
+        var category = event.target.parentNode.getAttribute("id");
+        goToCategory(category);
+      });
+    }
+
+    var initialCategory = "home";
+    goToCategory(initialCategory);
+  </script>
+</body>
+</html>
+
